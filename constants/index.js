@@ -17,26 +17,31 @@
 const CURRENT_YEAR = 2022;
 
 const LEAGUES = {
-  SERIE_A: {
-    link: 'https://www.transfermarkt.com/serie-a/tabelle/wettbewerb/IT1/saison_id/',
-    firstSeason: 1929,
-    lastSeason: CURRENT_YEAR,
-  },
-  SERIE_B: {
-    link: 'https://www.transfermarkt.com/serie-a/tabelle/wettbewerb/IT2/saison_id/',
-    firstSeason: 1929,
-    lastSeason: CURRENT_YEAR,
-  },
-  LA_LIGA_1: {
-    link: 'https://www.transfermarkt.com/laliga/tabelle/wettbewerb/ES1/saison_id/',
-    firstSeason: 1929,
-    lastSeason: CURRENT_YEAR,
-  },
-  /** для 2 дивизиона испании: // для сегунды глюки до 1940 года, до этого данные некорректные (( */
-  LA_LIGA_2: {
-    link: 'https://www.transfermarkt.com/laliga/tabelle/wettbewerb/ES2/saison_id/',
-    firstSeason: 1940,
-    lastSeason: CURRENT_YEAR,
+  // SERIE_A: {
+  //   link: 'https://www.transfermarkt.com/serie-a/tabelle/wettbewerb/IT1/saison_id/',
+  //   firstSeason: 1929,
+  //   lastSeason: CURRENT_YEAR,
+  // },
+  // SERIE_B: {
+  //   link: 'https://www.transfermarkt.com/serie-a/tabelle/wettbewerb/IT2/saison_id/',
+  //   firstSeason: 1929,
+  //   lastSeason: CURRENT_YEAR,
+  // },
+  // LA_LIGA_1: {
+  //   link: 'https://www.transfermarkt.com/laliga/tabelle/wettbewerb/ES1/saison_id/',
+  //   firstSeason: 1929,
+  //   lastSeason: CURRENT_YEAR,
+  // },
+  // /** для 2 дивизиона испании: // для сегунды глюки до 1940 года, до этого данные некорректные (( */
+  // LA_LIGA_2: {
+  //   link: 'https://www.transfermarkt.com/laliga/tabelle/wettbewerb/ES2/saison_id/',
+  //   firstSeason: 1940,
+  //   lastSeason: CURRENT_YEAR,
+  // },
+  SERBIA: {
+    link: 'https://www.transfermarkt.com/serbia-super-liga/tabelle/wettbewerb/SER1/saison_id/',
+    firstSeason: 2004,
+    lastSeason: 2021
   }
 }
 
