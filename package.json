@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "create my own FC database",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "start": "node index.js"
@@ -12,7 +13,8 @@
   "dependencies": {
     "axios": "^0.22.0",
     "cheerio": "^1.0.0-rc.10",
-    "cheerio-tableparser": "^1.0.1"
+    "cheerio-tableparser": "^1.0.1",
+    "jsdom": "^11.1.0"
   },
   "devDependencies": {
     "esm": "^3.2.25",

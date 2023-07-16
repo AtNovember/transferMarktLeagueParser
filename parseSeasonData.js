@@ -4,7 +4,7 @@ const cheerioTableparser = require('cheerio-tableparser');
 
 const link = 'https://www.transfermarkt.world/super-liga-srbije/startseite/wettbewerb/SER1';
 
-async function parseSeasonData(sourceLink = link) {
+export async function parseSeasonData(sourceLink = link) {
 
   const responseData = await axios
     .get(sourceLink)

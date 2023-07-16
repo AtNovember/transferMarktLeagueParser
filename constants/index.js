@@ -56,4 +56,23 @@ const LEAGUES = {
 // https://www.transfermarkt.ru/barcelona/kader/verein/131/plus/1/galerie/0?saison_id=2004
 // https://www.transfermarkt.ru/%D0%A4%D0%9A-%D0%91%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D0%BE%D0%BD%D0%B0/kader/verein/131/plus/1/galerie/0?saison_id=2004
 
-module.exports = {LEAGUES};
+
+// Стоимость клубов по сезонам
+// https://www.transfermarkt.world/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%D0%9B%D0%B8%D0%B3%D0%B0/marktwerteverein/wettbewerb/SER1/plus/1?stichtag=2010-11-01
+
+// Трансферы
+// https://www.transfermarkt.world/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%D0%9B%D0%B8%D0%B3%D0%B0/transfers/wettbewerb/SER1/plus/?saison_id=2006&s_w=&leihe=1&intern=0&intern=1
+// https://www.transfermarkt.world/Superliga/transfers/wettbewerb/SER1/plus/?saison_id=2004&s_w=&leihe=1&intern=0&intern=1
+
+const TRANSFERS = {
+  SERBIA: {
+    link: 'https://www.transfermarkt.world/Superliga/transfers/wettbewerb/SER1/plus/?saison_id=',
+    firstSeason: 2004,
+    // lastSeason: 2026
+    lastSeason: 2006
+  }
+}
+
+
+
+module.exports = {LEAGUES, TRANSFERS};
