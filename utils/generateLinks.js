@@ -1,5 +1,5 @@
 // // generate links array
-function generateLinks(league) {
+export function generateLinks(league) {
   // const link = 'https://www.transfermarkt.com/serie-a/tabelle/wettbewerb/IT2/saison_id/'
   const {link, firstSeason, lastSeason} = league;
 
@@ -11,4 +11,4 @@ function generateLinks(league) {
   return links;
 }
 
-module.exports = {generateLinks};
+// module.exports = {generateLinks};

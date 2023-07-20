@@ -1,10 +1,11 @@
 // const parseSeasonData = require('./parseSeasonData');
 // // const parsePlayersPerSeasonAndClubData = require('./parsePlayersPerSeasonAndClubData');
 // const {generateLinks} = require('./utils/generateLinks');
+import {generateLinks} from './utils/generateLinks.js';
 // const {fixLeagueKey} = require('./utils/fixLeagueKey');
 // const {sortLeagueDataBySeason} = require('./utils/sortBySeason');
 // const {fixSeasonKeyLabel, transformTableData} = require('./utils/transformer');
-// const {LEAGUES, TRANSFERS} = require('./constants');
+import {LEAGUES, TRANSFERS} from './constants/index.js';
 // const {parsePlayersPerSeasonAndClubData} = require('./parsePlayerPerSeasonAndClubData');
 // const parseTransferData = require('./parseTransferData');
 import {parseTransferData} from './parseTransferData.js';
@@ -15,9 +16,9 @@ const DATA_URL = '';
 
 
 /** сохраняем в файл: */
-const saveStats = async (data) => {
+const saveStats = async (fileIndex, data) => {
   // await fs.writeFile('./save/data.json', JSON.stringify(data))
-  await fs.writeFile('./save/transfers_SER1.json', JSON.stringify(data))
+  await fs.writeFile(`./save/club_transfers_${fileIndex}.json`, JSON.stringify(data))
 }
 
 const parsedData = [];
@@ -74,11 +75,21 @@ const LEAGUE = 'Serbia Super Liga';
 
 
 
-// generateLinks(TRANSFERS.SERBIA)
-//   .forEach(link => {
-//     parseTransferData(link);
-//   })
+generateLinks(TRANSFERS.BOSNIA_2_2)
+  .forEach((link, index) => {
+    console.log('link', link);
+    const filename = `BOSNIA_2_2-${link.split('=')[1]}`;
+    parseTransferData(link)
+    .then((responseData) => {
+      saveStats(filename, responseData);
+    });
+  })
+  
 
 const link = 'https://www.transfermarkt.world/super-liga-srbije/transfers/wettbewerb/SER1/plus/?saison_id=2004';
 
-parseTransferData(link);
+// parse Transfer data
+// parseTransferData(link)
+  // .then((responseData) => {
+  //   saveStats(responseData);
+  // });
